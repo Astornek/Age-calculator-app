@@ -38,20 +38,22 @@ main {
 }
 .input-area {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
   max-width: 40rem;
   color: var(--Smokey-grey);
   margin-bottom: 1rem;
 }
 .input-box {
-  max-width: 15rem;
+  max-width: 30rem;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .input-box p {
   margin-bottom: 0.5rem;
 }
 input {
-  max-width: 5rem;
+  max-width: 6rem;
   border: none;
   border-radius: 15px;
   outline-color: var(--Purple);
@@ -103,4 +105,36 @@ button {
   display: flex;
   justify-content: center;
   font-weight: 400;
+}
+.day-input.active,
+.month-input.active,
+.year-input.active {
+  border: 1px solid red;
+}
+.error-msg-day,
+.error-msg-month,
+.error-msg-year {
+  color: red;
+  font-size: 0.9rem;
+  display: none;
+  font-weight: 400;
+  font-style: italic;
+  width: 150%;
+  margin-top: 0.5rem;
+}
+.error-msg-day.active,
+.error-msg-month.active,
+.error-msg-year.active {
+  display: block;
+}
+
+@media (max-width: 550px) {
+  button {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .btn-box {
+    justify-content: center;
+    margin: 2rem 0;
+  }
 }
